@@ -1,10 +1,10 @@
 #include "Manager.h"
 #include "Employee.h"
 #include <iostream>
-
+#include <conio.h>
 int main()
    {
-   Manager man;
+	Manager* man= new Manager();
 
    Employee dan(1, "Dan");
    Employee mike(2, "Mike");
@@ -32,7 +32,7 @@ int main()
    sarah.report();
    dan.work(5);
    dan.report();
-   man.report();
+   man->report();
    alex.work(4);
    alex.work(3);
    alex.work(7);
@@ -44,7 +44,7 @@ int main()
    sarah.report();
    dan.work(8);
    dan.work(7);
-   man.report();
+   man->report();
    mike.work(11);
    mike.work(4);
    alex.work(7);
@@ -55,9 +55,9 @@ int main()
    mike.report();
    alex.report();
    sarah.report();
-   man.report();
-   man.report();
-
-
+   man->report();
+   man->report();
+   
+   getch();
    return 0;
    }
